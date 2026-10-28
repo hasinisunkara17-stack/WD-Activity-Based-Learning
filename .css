@@ -1,0 +1,170 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 230px;
+    background-color: #1e293b;
+    color: white;
+    padding: 25px 15px;
+    flex-shrink: 0;
+}
+
+.sidebar h2 {
+    margin-bottom: 30px;
+    font-size: 22px;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 14px 10px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+}
+
+.sidebar a:hover {
+    background-color: #3b82f6;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 25px;
+    min-width: 0;
+}
+
+header {
+    margin-bottom: 25px;
+}
+
+header h1 {
+    color: #1e293b;
+    margin-bottom: 10px;
+}
+
+/* Cards */
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #00000010;
+}
+
+.card h2 {
+    margin-bottom: 15px;
+    color: #2563eb;
+}
+
+.card p {
+    margin: 10px 0;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.cards .card {
+    text-align: center;
+}
+
+.cards h2 {
+    color: #16a34a;
+    font-size: 30px;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #2563eb;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f8fafc;
+}
+
+/* Attendance Progress Bar */
+.progress {
+    width: 100%;
+    height: 12px;
+    background-color: #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.bar {
+    height: 100%;
+    background-color: #22c55e;
+    border-radius: 10px;
+}
+
+/* Announcements */
+.announcements p {
+    background-color: #eff6ff;
+    padding: 12px;
+    border-left: 4px solid #2563eb;
+    border-radius: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .sidebar a {
+        display: inline-block;
+        padding: 10px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}
